@@ -113,3 +113,4 @@ var Triarc;
         mod.directive(Triarc.Web.DragAndDropImageArea.directiveId, function ($fileUploader, $translate) { return new Triarc.Web.DragAndDropImageArea($fileUploader, $translate); });
     })(Image = Triarc.Image || (Triarc.Image = {}));
 })(Triarc || (Triarc = {}));
+
