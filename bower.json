@@ -1,6 +1,6 @@
 {
   "name": "cirrus-tlImage",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "authors": [
     "Marco Bachmann <mb@triarc-labs.com>"
   ],
@@ -16,8 +16,11 @@
     "test",
     "tests"
   ],
+  "typescript": {
+    "definition": "tlImage.d.ts"
+  },
   "endpoint": "https://github.com/triarc/cirrus-tlImage.git",
   "dependencies": {
-    "cirrus-tlFileUploader": "~0.0.5"
+    "cirrus-tlFileUploader": "~0.0.6"
   }
 }
