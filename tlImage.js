@@ -117,7 +117,11 @@ var Triarc;
                     attrs.$observe("tlImage", function () {
                         var imageString = attrs.tlImage;
                         if (angular.isString(imageString)) {
-                            element.css("background-image", "data:image/png;base64," + imageString);
+                            var result = scope.$eval(imageString);
+                            if (angular.isString(result))
+                                element.css("background-image", "data:image/png;base64," + imageString);
+                            else
+                                element.css("background-image", "");
                         }
                         else {
                             element.css("background-image", "");
