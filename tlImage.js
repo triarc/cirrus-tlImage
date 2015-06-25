@@ -114,18 +114,16 @@ var Triarc;
         mod.directive("tlImage", function () {
             return {
                 link: function (scope, element, attrs) {
-                    attrs.$observe("tlImage", function () {
+                    scope.$watch(function () {
                         var imageString = attrs.tlImage;
-                        if (angular.isString(imageString)) {
-                            var result = scope.$eval(imageString);
-                            if (angular.isString(result))
-                                element.css("background-image", "data:image/png;base64," + imageString);
-                            else
-                                element.css("background-image", "");
-                        }
-                        else {
+                        if (angular.isString(imageString))
+                            return scope.$eval(imageString);
+                        return null;
+                    }, function (newVal) {
+                        if (angular.isString(newVal))
+                            element.css("background-image", "data:image/png;base64," + newVal);
+                        else
                             element.css("background-image", "");
-                        }
                     });
                 }
             };
