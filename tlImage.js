@@ -121,7 +121,7 @@ var Triarc;
                         return null;
                     }, function (newVal) {
                         if (angular.isString(newVal))
-                            element.css("background-image", "data:image/png;base64," + newVal);
+                            element.css("background-image", "url(data:image/png;base64," + newVal + ")");
                         else
                             element.css("background-image", "");
                     });
