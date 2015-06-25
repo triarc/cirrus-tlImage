@@ -111,6 +111,21 @@ var Triarc;
     (function (Image) {
         var mod = angular.module('tlImage', []);
         mod.directive(Triarc.Web.DragAndDropImageArea.directiveId, function ($fileUploader, $translate) { return new Triarc.Web.DragAndDropImageArea($fileUploader, $translate); });
+        mod.directive("tlImage", function () {
+            return {
+                link: function (scope, element, attrs) {
+                    attrs.$observe("tlImage", function () {
+                        var imageString = attrs.tlImage;
+                        if (angular.isString(imageString)) {
+                            element.css("background-image", "data:image/png;base64," + imageString);
+                        }
+                        else {
+                            element.css("background-image", "");
+                        }
+                    });
+                }
+            };
+        });
     })(Image = Triarc.Image || (Triarc.Image = {}));
 })(Triarc || (Triarc = {}));
 
