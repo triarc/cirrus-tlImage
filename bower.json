@@ -21,6 +21,6 @@
   },
   "endpoint": "https://github.com/triarc/cirrus-tlImage.git",
   "dependencies": {
-    "cirrus-tlFileUploader": "~0.0.6"
+    "cirrus-tlFileUploader": "^0.0.6"
   }
 }
