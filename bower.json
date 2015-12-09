@@ -1,10 +1,9 @@
 {
   "name": "cirrus-tlImage",
   "version": "0.1.0",
-  "authors": [
-    "Marco Bachmann <mb@triarc-labs.com>"
+  "main": [
+    "tlImage.js"
   ],
-  "main": "tlImage.js",
   "moduleType": [
     "globals"
   ],

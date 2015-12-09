@@ -44,7 +44,7 @@ var Triarc;
                 var fileSelected = function (file) {
                     var reader = new FileReader();
                     reader.onload = (function (e) {
-                        scope.ngModel = e.target.result;
+                        scope.ngModel = reader.result;
                         scope.$apply();
                     });
                     reader.readAsDataURL(file);
